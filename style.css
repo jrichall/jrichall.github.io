@@ -14,13 +14,21 @@ html {
 }
 body {
     margin: 0;
+    color: #e8e8e8;
+    background-color: #A3B1B1;
 }
 article,
 aside,
 details,
 figcaption,
 figure,
-footer,
+footer {
+    color: #000;
+    padding: 10px;
+    text-align: end;
+    border-color: #0a1d1d;
+    border-top:solid;
+}
 header,
 main,
 menu,
@@ -896,7 +904,27 @@ a {
     padding-right: 4px;
     font-size: 110%;
 }
-.card,
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.card {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+/* .card, */
 .card-2 {
     box-shadow:
         0 2px 5px 0 rgba(0, 0, 0, 0.16),
@@ -1199,123 +1227,38 @@ a {
 .hover-none:hover {
     box-shadow: none !important;
 }
+
 /* Colors */
-.amber,
-.hover-amber:hover {
-    color: #000 !important;
-    background-color: #ffc107 !important;
-}
-.aqua,
-.hover-aqua:hover {
-    color: #000 !important;
-    background-color: #00ffff !important;
-}
-.blue,
-.hover-blue:hover {
-    color: #fff !important;
-    background-color: #2196f3 !important;
-}
-.light-blue,
-.hover-light-blue:hover {
-    color: #000 !important;
-    background-color: #87ceeb !important;
-}
-.brown,
-.hover-brown:hover {
-    color: #fff !important;
-    background-color: #795548 !important;
-}
-.cyan,
-.hover-cyan:hover {
-    color: #000 !important;
-    background-color: #00bcd4 !important;
-}
-.blue-grey,
-.hover-blue-grey:hover,
-.blue-gray,
-.hover-blue-gray:hover {
-    color: #fff !important;
-    background-color: #607d8b !important;
-}
-.green,
-.hover-green:hover {
-    color: #fff !important;
-    background-color: #4caf50 !important;
-}
-.light-green,
-.hover-light-green:hover {
-    color: #000 !important;
-    background-color: #8bc34a !important;
-}
-.indigo,
-.hover-indigo:hover {
-    color: #fff !important;
-    background-color: #3f51b5 !important;
-}
-.khaki,
-.hover-khaki:hover {
-    color: #000 !important;
-    background-color: #f0e68c !important;
-}
-.lime,
-.hover-lime:hover {
-    color: #000 !important;
-    background-color: #cddc39 !important;
-}
-.orange,
-.hover-orange:hover {
-    color: #000 !important;
-    background-color: #ff9800 !important;
-}
-.deep-orange,
-.hover-deep-orange:hover {
-    color: #fff !important;
-    background-color: #ff5722 !important;
-}
-.pink,
-.hover-pink:hover {
-    color: #fff !important;
-    background-color: #e91e63 !important;
-}
-.purple,
-.hover-purple:hover {
-    color: #fff !important;
-    background-color: #9c27b0 !important;
-}
-.deep-purple,
-.hover-deep-purple:hover {
-    color: #fff !important;
-    background-color: #673ab7 !important;
-}
-.red,
-.hover-red:hover {
-    color: #fff !important;
-    background-color: #f44336 !important;
-}
-.sand,
-.hover-sand:hover {
-    color: #000 !important;
-    background-color: #fdf5e6 !important;
-}
-.teal,
-.hover-teal:hover {
-    color: #fff !important;
-    background-color: #009688 !important;
-}
-.yellow,
-.hover-yellow:hover {
-    color: #000 !important;
-    background-color: #ffeb3b !important;
-}
+
 .white,
 .hover-white:hover {
     color: #000 !important;
     background-color: #fff !important;
 }
 .dark-teal {
-color: #fffff0 !important;
+color: #fff !important;
 background-color: #003333 !important;
 }
+.darkest,
+.darkest-hover:hover {
+    color: #fff !important;
+    background-color: #0A1D1D !important;
+}
+.darker {
+    color: #fff !important;
+    background-color: #072828 !important;
+}
+.lighter {
+    color: #000 !important;
+    background-color: #748383 !important;
+}
+.lightest {
+    color: #000 !important;
+    background-color: #A3B1B1 !important;
+}
+
+
+
 .black,
 .hover-black:hover {
     color: #fff !important;
@@ -1362,92 +1305,7 @@ background-color: #003333 !important;
     color: #000 !important;
     background-color: #ddffff !important;
 }
-.text-amber,
-.hover-text-amber:hover {
-    color: #ffc107 !important;
-}
-.text-aqua,
-.hover-text-aqua:hover {
-    color: #00ffff !important;
-}
-.text-blue,
-.hover-text-blue:hover {
-    color: #2196f3 !important;
-}
-.text-light-blue,
-.hover-text-light-blue:hover {
-    color: #87ceeb !important;
-}
-.text-brown,
-.hover-text-brown:hover {
-    color: #795548 !important;
-}
-.text-cyan,
-.hover-text-cyan:hover {
-    color: #00bcd4 !important;
-}
-.text-blue-grey,
-.hover-text-blue-grey:hover,
-.text-blue-gray,
-.hover-text-blue-gray:hover {
-    color: #607d8b !important;
-}
-.text-green,
-.hover-text-green:hover {
-    color: #4caf50 !important;
-}
-.text-light-green,
-.hover-text-light-green:hover {
-    color: #8bc34a !important;
-}
-.text-indigo,
-.hover-text-indigo:hover {
-    color: #3f51b5 !important;
-}
-.text-khaki,
-.hover-text-khaki:hover {
-    color: #b4aa50 !important;
-}
-.text-lime,
-.hover-text-lime:hover {
-    color: #cddc39 !important;
-}
-.text-orange,
-.hover-text-orange:hover {
-    color: #ff9800 !important;
-}
-.text-deep-orange,
-.hover-text-deep-orange:hover {
-    color: #ff5722 !important;
-}
-.text-pink,
-.hover-text-pink:hover {
-    color: #e91e63 !important;
-}
-.text-purple,
-.hover-text-purple:hover {
-    color: #9c27b0 !important;
-}
-.text-deep-purple,
-.hover-text-deep-purple:hover {
-    color: #673ab7 !important;
-}
-.text-red,
-.hover-text-red:hover {
-    color: #f44336 !important;
-}
-.text-sand,
-.hover-text-sand:hover {
-    color: #fdf5e6 !important;
-}
-.text-teal,
-.hover-text-teal:hover {
-    color: #009688 !important;
-}
-.text-yellow,
-.hover-text-yellow:hover {
-    color: #d2be0e !important;
-}
+/* Hover Texts */
 .text-white,
 .hover-text-white:hover {
     color: #fff !important;
@@ -1459,21 +1317,11 @@ background-color: #003333 !important;
 .text-grey,
 .hover-text-grey:hover,
 .text-gray,
-.hover-text-gray:hover {
-    color: #757575 !important;
-}
-.text-light-grey,
-.hover-text-light-grey:hover,
-.text-light-gray,
-.hover-text-light-gray:hover {
-    color: #f1f1f1 !important;
-}
-.text-dark-grey,
-.hover-text-dark-grey:hover,
-.text-dark-gray,
-.hover-text-dark-gray:hover {
-    color: #3a3a3a !important;
-}
+
+
+/* BOREDER COLORS */
+
+
 .border-amber,
 .hover-border-amber:hover {
     border-color: #ffc107 !important;
