@@ -1,232 +1,281 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script src="https://kit.fontawesome.com/99e8fc8dbe.js" crossorigin="anonymous"></script>
-  <title>NewSkool</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Courier New', Courier, monospace;
-      line-height: 1.6;
-      background-color: #fff0f6;
-      color: #222;
-    }
-    .hero {
-      padding: 50px;
-      background-image: url('/img/Img-ns/ns-header-01.png');
-     background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      text-shadow: 2px 2px 4px rgba(213, 0, 249, 0.2);
-      border-radius: 20px;
-      box-sizing: border-box;
-      min-height: 500px;
-    }
-    .hero h1 {
-      margin-top: 200px;
-        font-size: 5rem;
-      margin-bottom: 20px;
-       color: #d500f9;
-      font-family: 'Brush Script MT', cursive;
-    }
-    .hero h2 {
-      margin-top: 200px;
-        font-size: 3rem;
-      margin-bottom: 20px;
-       color: #d500f9;
-      font-family: 'Brush Script MT', cursive;
-    }
-    .cta-button {
-        margin-top: 200px;
-      background: #ffeb3b;
-      color: #d500f9;
-      padding: 14px 28px;
-      font-size: 1.2rem;
-      border: 2px solid #ff4081;
-      border-radius: 12px;
-      cursor: pointer;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-    .cta-button:hover {
-      background: #fff176;
-      color: #c2185b;
-    }
-    .content {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-        color: aliceblue;
-      background: #242424;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(213, 0, 249, 0.2);
-    }
-    .content h1{
-        font-size: 3rem;
-        margin-bottom: 20px;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/99e8fc8dbe.js" crossorigin="anonymous"></script>
+    <title>NewSkool</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Courier New', Courier, monospace;
+        line-height: 1.6;
+        background-color: #fff0f6;
+        color: #222;
+      }
+      .hero {
+        padding: 50px;
+        background-image: url('/img/Img-ns/ns-header-01.png');
+       background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-        color: #fff176;
-        text-shadow: 2px 2px 4px #b041b4;
-        font-family: 'Brush Script MT', cursive; 
-          
+        text-shadow: 2px 2px 4px rgba(213, 0, 249, 0.2);
+        border-radius: 20px;
+        box-sizing: border-box;
+        min-height: 500px;
       }
-    .inline-image {
-      float: right;
-      margin-left: 20px;
-      width: 300px;
-      max-width: 100%;
-      border: 4px solid #ff4081;
-      border-radius: 8px;
-    }
-    .paragraph {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-    }
-    .paragraph p {
-      flex: 1 1 45%;
-      margin-right: 20px;
-    }
-    .paragraph a {
-    color: #fff176
-    }
-    .paragraph img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border: 4px solid #ff4081;
-      border-radius: 8px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #8e24aa;
-      color: white;
-      font-family: 'Courier New', Courier, monospace;
-    }
-    @media (max-width: 768px) {
+      .hero h1 {
+        margin-top: 200px;
+          font-size: 5rem;
+        margin-bottom: 20px;
+         color: #d500f9;
+        font-family: 'Brush Script MT', cursive;
+      }
+      .hero h2 {
+        margin-top: 200px;
+          font-size: 3rem;
+        margin-bottom: 20px;
+         color: #d500f9;
+        font-family: 'Brush Script MT', cursive;
+      }
+      .cta-button {
+          margin-top: 200px;
+        background: #ffeb3b;
+        color: #d500f9;
+        padding: 14px 28px;
+        font-size: 1.2rem;
+        border: 2px solid #ff4081;
+        border-radius: 12px;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+      }
+      .cta-button:hover {
+        background: #fff176;
+        color: #c2185b;
+      }
+      .content {
+        padding: 60px 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+          color: aliceblue;
+        background: #242424;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(213, 0, 249, 0.2);
+      }
+      .content h1{
+          font-size: 3rem;
+          margin-bottom: 20px;
+          text-align: center;
+          color: #fff176;
+          text-shadow: 2px 2px 4px #b041b4;
+          font-family: 'Brush Script MT', cursive;
+
+        }
       .inline-image {
-        float: none;
-        display: block;
-        margin: 20px auto;
-        width: 100%;
+        float: right;
+        margin-left: 20px;
+        width: 300px;
+        max-width: 100%;
+        border: 4px solid #ff4081;
+        border-radius: 8px;
       }
-  </style>
-</head>
-<body>
-  <section class="hero">
-    <h2> Check It </h2>
-    
-  </section>
 
-  <section id="main-content" class="content">
-    <h1>Podcast Studio Setup Ideas</h1>
-    <h3>Based on the space and intended usage,</h3>
-    <p>it seems there are a few options for setting up NewSkool's podcast studio. However, there are 
-    a couple of factors in play that may cause some issues that would require testing before fully
-    committing.</p>
-      <br>
+      .paragraph a {
+      color: #fff176
+      }
+      .paragraph img {
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+        border: 4px solid #ff4081;
+        border-radius: 8px;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #8e24aa;
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+      }
+      @media (max-width: 768px) {
+        .inline-image {
+          float: none;
+          display: block;
+          margin: 20px auto;
+          width: 100%;
+        }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <h2>Check It</h2>
+    </section>
+
+    <section id="main-content" class="content">
+      <h1>Podcast Studio Setup Ideas</h1>
+      <h3>Based on the space and intended usage,</h3>
+      <p>
+        it seems there are a few options for setting up NewSkool's podcast studio. However, there are a couple of
+        factors in play that may cause some issues that would require testing before fully committing.
+      </p>
+      <br />
       The setups below will work for both a 3 or 4 camera setup. They will also work for 1-4 people.
-      <br><br> Please don't judge my diagrams too harshly...
-    <h2>The biggest challenge is also the biggest opportunity</h2>
-    <p>
-      <a href="/img/Img-ns/windows.jpg" target="_blank">
-    <img class="inline-image" src="/img/Img-ns/windows.jpg" alt="Placeholder Image 1" />
-      </a>
-      The windows.
-      <br><br>
-      The large windows in the space are terrific, but they present a potential challenge for
-      filming. While they look terrific, and the industrial brick building outside would make a nice background,
-      they'll also be tougher to film in front of.
-      <br><br>
-      Recording during the day would require some fairly powerful lighting in studio. This would prevent
-      the windows from being blown out (looking like they're just white) and the subjects from being poorly lit. It's do-able,
-      but you're going to need to invest a bit more money in lighting.
-      <br><br>
-      Recording at night runs the risk of something going on in the rooms across the courtyard being visible. 
-      Not a huge deal, as those rooms would be out of focus, but it is worth noting.
-      <br><br>
-      It would be <i>easier</i> to build out some false walls and cover the windows. However, I really think the look
-      of the window with the brick building in the background would be nice - at least worth testing before making a final decision.
-    <br>
-        <br>
+      <p>Please don't judge my diagrams too harshly...</p>
+      <h2>The biggest challenge is also the biggest opportunity</h2>
+      <p>
+        <a href="/img/Img-ns/windows.jpg" target="_blank">
+          <img class="inline-image" src="/img/Img-ns/windows.jpg" alt="Placeholder Image 1" />
+        </a>
+        The windows.
+      </p>
+
+      <p>
+        The large windows in the space are terrific, but they present a potential challenge for filming. While they look
+        terrific, and the industrial brick building outside would make a nice background, they'll also be tougher to
+        film in front of.
+      </p>
+
+      <p>
+        Recording during the day would require some fairly powerful lighting in studio. This would prevent the windows
+        from being blown out (looking like they're just white) and the subjects from being poorly lit. It's do-able, but
+        you're going to need to invest a bit more money in lighting.
+      </p>
+
+      <p>
+        Recording at night runs the risk of something going on in the rooms across the courtyard being visible. Not a
+        huge deal, as those rooms would be out of focus, but it is worth noting.
+      </p>
+
+      <p>
+        It would be <i>easier</i> to build out some false walls and cover the windows. However, I really think the look
+        of the window with the brick building in the background would be nice - at least worth testing before making a
+        final decision.
+        <br />
+        <br />
         As a result, both recommendations take into account using the windows and utilizing false walls.
-    </p>
-<h2>Middle Setup</h2>
-    <p>
-      <a href="/img/Img-ns/NewSkool%20-%20Room%20-%20Windows.png" target="_blank">
-        <img class="inline-image" src="/img/Img-ns/NewSkool%20-%20Room%20-%20Windows.png" alt="Placeholder Image 1" />
-      </a>
-      <br>
-This setup takes advantage of the windows (if feasible to do so, as mentioned above). I'd recommend building out a false wall in front of the electrical
-        panel and using that space for a neon sign of the NewSkool logo. 
-      <br><br>
-The wall to the left of the windows (facing the windows) presents a lot of opportunity for either artwork, shelves with props, and sound treatment (out of frame of the cameras).
-      <br><br>
-The wall to the right has some of the elements of the building, like the fire-department thing, the beams, and counterweight. Could also be decorated, painted, or covered.
-      <br><br>
-Production equipment, like a computer and sound board, would be housed in a rolling case and could be moved to the area of the floor between the two doors (grey floor space in the diagram). 
-        When not recording, it can be packed up and moved out of the way.
-    </p>
+      </p>
+      <h2>Middle Setup</h2>
+      <p>
+        <a href="/img/Img-ns/NewSkool%20-%20Room%20-%20Windows.png" target="_blank">
+          <img class="inline-image" src="/img/Img-ns/NewSkool%20-%20Room%20-%20Windows.png" alt="Placeholder Image 1" />
+        </a>
+        <br />
+        This setup takes advantage of the windows (if feasible to do so, as mentioned above). I'd recommend building out
+        a false wall in front of the electrical panel and using that space for a neon sign of the NewSkool logo.
+      </p>
 
+      <p>
+        The wall to the left of the windows (facing the windows) presents a lot of opportunity for either artwork,
+        shelves with props, and sound treatment (out of frame of the cameras).
+      </p>
 
-    <h2>Both setups</h2>
-    <p>
-      <a href="/img/Img-ns/Room%20Idea%201.png" target="_blank">
-        <img class="inline-image" src="/img/Img-ns/Room%20Idea%201.png" alt="Placeholder Image 1" />
-      </a>
-      <br>
-Access to power on the ceiling makes for easier lighting installation. Some simple pipes suspended from the ceiling would allow for both lighting fixtures 
-        as well as sound treatment. 
-    <br><br>A large area rug will help cut down on echo, and also reduce any noise from chairs or the table being moved.
-    <br><br>Speaking of chairs, you'd want to go with non-spinning options. I would recommend some "modern" armchairs and a coffee/cocktail table.    
-    </p>
+      <p>
+        The wall to the right has some of the elements of the building, like the fire-department thing, the beams, and
+        counterweight. Could also be decorated, painted, or covered.
+      </p>
+
+      <p>
+        Production equipment, like a computer and sound board, would be housed in a rolling case and could be moved to
+        the area of the floor between the two doors (grey floor space in the diagram). When not recording, it can be
+        packed up and moved out of the way.
+      </p>
+
+      <h2>Both setups</h2>
+      <p>
+        <a href="/img/Img-ns/Room%20Idea%201.png" target="_blank">
+          <img class="inline-image" src="/img/Img-ns/Room%20Idea%201.png" alt="Placeholder Image 1" />
+        </a>
+        <br />
+        Access to power on the ceiling makes for easier lighting installation. Some simple pipes suspended from the
+        ceiling would allow for both lighting fixtures as well as sound treatment.
+      </p>
+
+      <p>
+        A large area rug will help cut down on echo, and also reduce any noise from chairs or the table being moved.
+      </p>
+      <p>
+        Speaking of chairs, you'd want to go with non-spinning options. I would recommend some "modern" armchairs and a
+        coffee/cocktail table.
+      </p>
       <h2>Equipment and Storage</h2>
-    <h3>Storage</h3>
+      <h3>Storage</h3>
       <div class="paragraph">
-      <p>I'm a big fan of road cases. These close up and lock, are on wheels so they're easy to move, and allow you to leave various pieces of equipment connected to each other and to power - reducing setup and tear down time. 
-          <a href="https://www.amazon.com/PRORECK-Casters-Rackable-Installation-Performance/dp/B0D99VJZDZ" target="_blank">Something like this</a> even gives you built-in table space for a laptop or monitor. The sound board would sit on the top. </p>
-      <a href="/img/Img-ns/road%20case.jpg" target="_blank">
-        <img src="/img/Img-ns/road%20case.jpg" alt="road case" />
-      </a>
-    </div>
-    <h3>Audio Recording</h3>
-     <div class="paragraph">
-         <p>You have a few options when dealing with audio recording. </p>
-     <h3>Podcast-designed recorders</h3>
-         <p>I am personally a big fan of the Zoom LiveTrak L-8 and L-12. 
-         <a href="https://www.amazon.com/Rode-Rodecaster-Podcast-Production-Console/dp/B0B17V8NGX" target="_blank">Roadcaster Pro II</a> and the <a href="https://www.amazon.com/Zoom-P8-Microphone-Headphone-Interface/dp/B08HKL3T1S" target="_blank">Zoom Podtrak p8</a>.
-        <br><br>These devices offer simplified interfaces designed more for livestream, minimal post-processing type recordings. There are pros and cons to this. If you're going to record and use the audio with minimal editing, or plan to do a lot of
-         remote recording sessions, one of these may work for you. However, while there are some tone controls, the sound they produce is more or less the sound you get. They also only connect to a PC with a single stereo output, which isn't
-         ideal if you want to record separate tracks into the computer. 
-         <br><br>A podcast-designed recorder will work well if you're planning on self-producing. They connect easily to remote guests, with the Rode even featuring built-in bluetooth for connectivity to another device. However, I'm not sure the Rodecaster Pro II's price tag and feature set make it
-         a true stand out compared to the PodTrak.</p>
-   
-    <h3>Multi-track audio mixers / recorders</h3>
-         <p>I have used both the  <a href="https://www.amazon.com/Zoom-LiveTrak-L-8-Headphone-Interface/dp/B07YYQ93BT" target="_blank">Zoom LiveTrak L-8</a> and L-12. The 12 would most likely be overkill for your needs.
+        <p>
+          I'm a big fan of road cases. These close up and lock, are on wheels so they're easy to move, and allow you to
+          leave various pieces of equipment connected to each other and to power - reducing setup and tear down time.
+          <a
+            href="https://www.amazon.com/PRORECK-Casters-Rackable-Installation-Performance/dp/B0D99VJZDZ"
+            target="_blank"
+            >Something like this</a
+          >
+          even gives you built-in table space for a laptop or monitor. The sound board would sit on the top.
+        </p>
+        <a href="/img/Img-ns/road%20case.jpg" target="_blank">
+          <img src="/img/Img-ns/road%20case.jpg" alt="road case" />
+        </a>
+      </div>
+      <h2>Audio Recording</h2>
+      <div class="paragraph">
+        <p>You have a few options when dealing with audio recording.</p>
+        <h3>Podcast-designed recorders</h3>
+        <p>
+          There are a couple of frontrunners when it comes to recording devices designed for podcasting, the
+          <a href="https://www.amazon.com/Rode-Rodecaster-Podcast-Production-Console/dp/B0B17V8NGX" target="_blank"
+            >Roadcaster Pro II</a
+          >
+          and the
+          <a href="https://www.amazon.com/Zoom-P8-Microphone-Headphone-Interface/dp/B08HKL3T1S" target="_blank"
+            >Zoom Podtrak p8</a
+          >.
+        </p>
 
-        <br><br>My bias is going to show here, but the L-8 is my go-to recommendation for multitrack recording needs. It combines the connectivity and multiple headphone outputs of the podcast-designed mixers, with better control of the audio. Plus, it
-             records each track individually at a very high quality sample rate.
-         <br><br>The L-8 is not <i>quite</i> as plug-and-play as the Rodecaster or PodTrak, but at its price point it punches way above its weight class when it comes to professional audio recording.
-         <br><br>I'd recommend the LiveTrak if you're planning on having a producer on-set for recording, or if you're willing to learn a little about mixing and eq.</p>
+        <p>
+          These devices offer simplified interfaces designed more for livestream, minimal post-processing type
+          recordings. There are pros and cons to this. If you're going to record and use the audio with minimal editing,
+          or plan to do a lot of remote recording sessions, one of these may work for you. However, while there are some
+          tone controls, the sound they produce is more or less the sound you get. They also only connect to a PC with a
+          single stereo output, which isn't ideal if you want to record separate tracks into the computer.
+        </p>
 
+        <p>
+          A podcast-designed recorder will work well if you're planning on self-producing. They connect easily to remote
+          guests, with the Rode even featuring built-in bluetooth for connectivity to another device. However, I'm not
+          sure the Rodecaster Pro II's price tag and feature set make it a true stand out compared to the PodTrak.
+        </p>
+        <p></p>
+        <p></p>
+        <h3>Multi-track audio mixers / recorders</h3>
+        I have used both the
+        <a href="https://www.amazon.com/Zoom-LiveTrak-L-8-Headphone-Interface/dp/B07YYQ93BT" target="_blank"
+          >Zoom LiveTrak L-8</a
+        >
+        and L-12. The 12 would most likely be overkill for your needs.
 
-    </div>
+        <p>
+          My bias is going to show here, but the L-8 is my go-to recommendation for multitrack recording needs. It
+          combines the connectivity and multiple headphone outputs of the podcast-designed mixers, with better control
+          of the audio. Plus, it records each track individually at a very high quality sample rate.
+        </p>
+
+        <p>
+          The L-8 is not <i>quite</i> as plug-and-play as the Rodecaster or PodTrak, but at its price point it punches
+          way above its weight class when it comes to professional audio recording.
+        </p>
+        <p>
+          I'd recommend the LiveTrak if you're planning on having a producer on-set for recording, or if you're willing
+          to learn a little about mixing and eq.
+        </p>
+      </div>
       <h3>More to come...</h3>
-  </section>
+    </section>
 
-  <footer>
-    &copy; 2025 - Justin Richall
-  </footer>
-</body>
+    <footer>&copy; 2025 - Justin Richall</footer>
+  </body>
 </html>
