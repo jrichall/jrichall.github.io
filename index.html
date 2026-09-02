@@ -62,14 +62,14 @@
     gap:10px;
   }
   .nav-mark{
-    width:26px; height:26px;
+    width:44px; height:44px;
     border-radius:50%;
     object-fit:cover;
   }
   .nav-word{
     color:#fff;
     font-family:'Space Grotesk', sans-serif;
-    font-size:16px;
+    font-size:19px;
     font-weight:600;
   }
 
@@ -346,7 +346,7 @@
     gap:8px;
   }
   .footer-bottom img{
-    width:20px; height:20px;
+    width:28px; height:28px;
     border-radius:50%;
   }
 
@@ -392,7 +392,7 @@
       </h1>
       <p class="sub">Interviews about the job hunts, networking, and career moments that actually happened — minus the "humbled and honored to announce" energy.</p>
 
-      <form class="signup" id="signup-form">
+      <form class="signup" id="signup-form" action="https://formspree.io/f/meaqkorg" method="POST">
         <label for="email" class="visually-hidden" style="position:absolute;left:-9999px;">Email address</label>
         <input type="email" id="email" name="email" placeholder="you@work-email.com" required>
         <button type="submit" class="btn">Notify me</button>
@@ -473,8 +473,8 @@
   <section class="footer-cta">
     <div class="wrap footer-cta-inner">
       <h2>Be the first to know when we go live.</h2>
-      <form class="signup" id="signup-form-2">
-        <input type="email" placeholder="you@work-email.com" required aria-label="Email address">
+      <form class="signup" id="signup-form-2" action="https://formspree.io/f/meaqkorg" method="POST">
+        <input type="email" name="email" placeholder="you@work-email.com" required aria-label="Email address">
         <button type="submit" class="btn">Notify me</button>
       </form>
 
@@ -494,13 +494,34 @@
   function handleSignup(formEl){
     formEl.addEventListener('submit', function(e){
       e.preventDefault();
-      // TODO: wire this up to your email provider (Formspree, Mailchimp, Cloudflare Pages Function, etc.)
-      const successEl = document.getElementById('form-success');
-      if(successEl){
-        successEl.style.display = 'block';
-      }
-      formEl.reset();
-      formEl.querySelector('input[type="email"]').blur();
+      const btn = formEl.querySelector('button');
+      const emailInput = formEl.querySelector('input[type="email"]');
+      const originalLabel = btn.textContent;
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      fetch(formEl.action, {
+        method: 'POST',
+        body: new FormData(formEl),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function(response){
+        if(response.ok){
+          const successEl = document.getElementById('form-success');
+          if(successEl){ successEl.style.display = 'block'; }
+          formEl.reset();
+        } else {
+          alert('Something went wrong — mind trying again?');
+        }
+      })
+      .catch(function(){
+        alert('Something went wrong — mind trying again?');
+      })
+      .finally(function(){
+        btn.textContent = originalLabel;
+        btn.disabled = false;
+        emailInput.blur();
+      });
     });
   }
   handleSignup(document.getElementById('signup-form'));
